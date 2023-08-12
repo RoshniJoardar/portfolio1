@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshni- Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(0, 0, 33);
+            color: aliceblue;
+            margin: 0;
+            padding: 0;
+            height: 100vw;
+        
+}
+
+.threeD {
+  color: darkgrey;
+  white-space: nowrap;
+  left: 50%;
+  padding-left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  transition: 0.3s;
+  text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+    1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+    5px 13px 15px black;
+}
+
+.threeD:hover {
+  transition: 0.3s;
+  transform: scale(1.1)translate(-50%, -50%);
+  text-shadow: 1px -1px 0 grey, 1px -2px 0 grey, 1px -3px 0 grey,
+    1px -4px 0 grey, 1px -5px 0 grey, 1px -6px 0 grey, 1px -7px 0 grey,
+    1px -8px 0 grey, 5px -13px 15px black, 5px -13px 25px #808080;
+}
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 80px;
+           background-color: rgb(25, 25, 87);
+
+        }
+        nav ul li a:hover{
+            color: brown;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav div ul li {
+            list-style: none;
+        }
+        nav div ul li a {
+            margin: 23px;
+            transition: 3s;
+            font-size: 1.2rem;
+            color: antiquewhite;
+        }
+        .left{
+            font-size: 2rem; 
+            font-weight: 200;
+            font-style: bold;
+        }
+        .left b {
+            color: rgb(172, 25, 25);
+        }
+        .right{
+            font-size: smaller;
+        }
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            margin: 23px;
+        }
+        .firstSection > div{
+            width: 30%;
+        }
+        .leftSection{
+            width: 34px;
+            font-size: 2rem;
+            margin-top: 8%;
+         
+        }
+        .rightSection{
+           align-items: right;
+            width: 34px;
+         margin-top: 8%;
+        }
+        .leftSection b {
+         color: rgb(165, 35, 35);
+         font-size: 3rem;
+        }
+        #element{
+            color: rgb(165, 35, 35);
+        }
+        main hr  {
+            border: 0px;
+            margin: 30px;
+          height: 1px;
+            background-color: rgb(160, 22, 22);
+        } 
+        
+        .typegray{
+          padding-left: 15%;
+          color: bisque;
+        }
+        .secondSection h1{
+          padding-left: 15%;
+          color: #808080;
+          font-size: 3rem;
+          display: flex;
+        }
+        .box{
+            margin: 0px 100px ;
+          height: 3px;
+            background-color: rgb(160, 22, 22);
+            width: 80vw;
+            display: flex;
+            width: 40%;
+        }
+        .secondSection .vertical{
+          background-color: brown;
+          height: 93px;
+          width: 1px;
+          margin: 0% 10%;
+          display:flex;
+         }  
+        
+         .button{
+          font-size: 1.5rem;
+          padding: 20px;
+          color: #fff;
+          border: 2px solid #3e0b0b;
+          border-radius: 20px/50px;
+          text-decoration: none;
+          cursor: pointer;
+          transition: all 0.3s ease-out;
+          font-size: 1.5rem;
+          margin: 20px;
+         }
+.button:hover {
+  background: #3e0b0b;
+ }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #f4efef;
+}
+.popup .close:hover {
+  color: #680e0e;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+    margin-top: 10px;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+.content{
+    background-color: gray;
+    
+}
+        
+   </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Portfo<b>lio</b></div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Skills</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+    </header>
+    <main> 
+        <section class="firstSection">
+            <div class="rightSection">
+                <img src="img/img.jpg" alt="width:('30%') align-items:('left')">
+                
+            </div>
+                <div class="leftSection">
+                    <div class="threeD">
+                        Hi,
+                      </div>
+                     <div>I am Roshni and I am a  Pationate <div> web Developer</div>
+                    </div>
+                    <span id="element"></span>
+                </div>  
+        </section>
+        <hr>
+        <section class="secondSection">
+          <span class="typegray">What I have done.</span>
+            <h1>Skills</h1>
+        <div class="box">
+             <div class="vertical">
+                    <a class="button" href="#popup1">HTML</a>
+                <div id="popup1" class="overlay">
+                    <div class="popup">
+                        <h2>HTML</h2>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                           <i> Greetings! I'm thrilled to introduce myself as a passionate web developer with a
+                             strong foundation in HTML. With a keen eye for design and a knack for creating seamless user experiences, I bring
+                             a unique blend of creativity and technical skills to the world of web development.</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="box">
+            <div class="vertical">
+                <a class="button" href="#popup1">Css</a>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Css</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                       <i> Greetings! I'm thrilled to introduce myself as a passionate web developer with a
+                         strong foundation in Css. With a keen eye for design and a knack for creating seamless user experiences, I bring
+                         a unique blend of creativity and technical skills to the world of web development.</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="box">
+        <div class="vertical">
+            <a class="button" href="#popup1">JAVA Script</a>
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>JAVA Script</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                   <i> Greetings! I'm thrilled to introduce myself as a passionate web developer with a
+                     strong foundation in JAVA Script. With a keen eye for design and a knack for creating seamless user experiences, I bring
+                     a unique blend of creativity and technical skills to the world of web development.</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ </div>
+</div>
+ </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer.', 'Web Designer.','Java Dveloper.'],
+          typeSpeed: 50,
+        });
+      </script>
+    
+</body>
+</html>
